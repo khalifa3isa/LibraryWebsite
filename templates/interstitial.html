@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Success Interstitial</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+        }
+        
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        
+        h1 {
+            color: #00a651;
+        }
+        
+        p {
+            color: #555555;
+        }
+    </style>
+    <script>
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            window.location.href="../php/librarian_dashboard.php";
+        }
+    </script>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <span class="close-icon" onclick="closePopup()">X</span>
+        <h1>Success!</h1>
+        <p>Task completed successfully.</p>
+    </div>
+</body>
+</html>

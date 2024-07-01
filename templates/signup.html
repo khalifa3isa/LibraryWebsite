@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+	<title>LibraSys - Sign up</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const myVariable = urlParams.get('profile');
+      </script>
+    <div class="header">
+        <a href="./index.html"><img src="../static/logo.jpeg" alt="Logo" class="logo"></a>
+      </div>
+	<div class="container">
+		<form method="post" action="../php/sendotp.php">
+			<h1>Sign up</h1>
+			<label for="name">Name *</label>
+			<input type="text" id="name" name="name" autocomplete="off" required>
+            <label for="phone">Phone (with country code) *</label>
+			<input type="tel" id="phone" name="phone" autocomplete="off" required>
+            <div id="phone-error" style="display: none; color: red;">Invalid phone number</div>
+			<label for="email">Email *</label>
+			<input type="email" id="email" name="email" autocomplete="off" required>
+            <div id="email-error" style="display: none; color: red;">Invalid email address</div>
+			<label for="password">Password *</label>
+			<input type="password" id="password" name="password" autocomplete="off" required>
+            <div id="password-error" style="display: none; color: red;">Password should have 8 characters including numeric and special characters</div>
+			<label for="confirm-password">Confirm Password *</label>
+			<input type="password" id="confirm-password" name="confirm-password" autocomplete="off" required>
+            <div id="confirm-password-error" style="display: none; color: red;">Password and confirm password is not matching</div>
+            <label for="profile">I am</label>
+            <select id="profile" name="profile" disabled>
+                <option value="student">Student</option>
+            </select> 
+
+            <br><br>
+			<input type="submit" name="submit" id="submit" value="Sign up">
+            
+            <script>
+                var myButton = document.getElementById("submit");
+
+                const emailInput = document.getElementById("email");
+                const emailError = document.getElementById("email-error");
+
+                function isValidEmail(email) {
+                    
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+
+                emailInput.addEventListener("input", handleInputChange);
+
+                function handleInputChange(event) {
+                
+                    const emailValue = event.target.value;
+
+                    if(emailValue == ""){
+
+                        emailError.style.display = "none";
+                    }
+                    else if (isValidEmail(emailValue)) {
+                    
+                        emailError.style.display = "none";
+                        myButton.disabled = false;
+                    } else {
+                
+                        emailError.style.display = "block";
+                        myButton.disabled = true;
+                    }
+                }
+
+                const passwordInput = document.getElementById("password");
+                const passwordError = document.getElementById("password-error");
+
+                function isValidPassword(password) {
+            
+                    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+                    return regex.test(password);
+                }
+
+                passwordInput.addEventListener("input", handleInputChange1);
+
+                function handleInputChange1(event) {
+                
+                    const passwordValue = event.target.value;
+
+                    if(passwordValue == ""){
+
+                        passwordError.style.display = "none";
+                    }
+                    else if (isValidPassword(passwordValue)) {
+                    
+                        passwordError.style.display = "none";
+                        myButton.disabled = false;
+                    } else {
+                
+                        passwordError.style.display = "block";
+                        myButton.disabled = true;
+                    }
+                }
+
+                const confirmPasswordInput = document.getElementById("confirm-password");
+                const confirmPasswordError = document.getElementById("confirm-password-error");
+
+                function isValidConfirmPassword(password) {
+            
+                   if(document.getElementById("password").value==document.getElementById("confirm-password").value){
+
+                        return true;
+                   }else{
+
+                        return false;
+                   }
+                }
+
+                confirmPasswordInput.addEventListener("input", handleInputChange2);
+
+                function handleInputChange2(event) {
+                
+                    const confirmPasswordValue = event.target.value;
+                    
+                    if(confirmPasswordValue == ""){
+
+                        confirmPasswordError.style.display = "none";
+                    }
+                    else if (isValidConfirmPassword(confirmPasswordValue)) {
+                    
+                        confirmPasswordError.style.display = "none";
+                        myButton.disabled = false;
+                    } else {
+                
+                        confirmPasswordError.style.display = "block";
+                        myButton.disabled = true;
+                    }
+                }
+
+                phoneNumber = document.getElementById("phone");
+                function isValidPhoneNumber(phoneNumber) {
+            
+                    const phoneRegex = /^\+(?:[0-9] ?){9,14}[0-9]{1,2}$/;
+                    return phoneRegex.test(phoneNumber);
+                }
+
+                const phoneError = document.getElementById("phone-error");
+                phoneNumber.addEventListener("input", handleInputChange3);
+
+                function handleInputChange3(event) {
+                
+                    const phoneNumber = event.target.value;
+
+                    if(phoneNumber == ""){
+
+                        phoneError.style.display = "none";
+                    }
+                    else if (isValidPhoneNumber(phoneNumber)) {
+                    
+                        phoneError.style.display = "none";
+                        myButton.disabled = false;
+                    } else {
+                
+                        phoneError.style.display = "block";
+                        myButton.disabled = true;
+                    }
+                }
+            </script>
+		</form>
+        <br>
+        <p>Already have an account? <a href="./login.html">Sign in</a> here</p>
+	</div>
+</body>
+</html>

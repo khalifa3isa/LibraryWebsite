@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="../icons/icon-192x192.png">
+	<meta name="viewport" content="width=device-width" initial-scale="1.0">
+	<title>LibraSys</title>
+	<link rel="stylesheet" type="text/css" href="../css/style_index.css">
+	<script>
+		if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('/static/service-worker.js')
+			.then(registration => {
+			  console.log('Service Worker registered with scope:', registration.scope);
+			})
+			.catch(error => {
+			  console.log('Service Worker registration failed:', error);
+			});
+		}
+	</script>
+</head>
+<body>
+    <br><br><br><br><br>
+    <div class="header">
+    	<a href="./index.html"><img src="../static/logo.jpeg" alt="Logo" class="logo"></a>
+      </div>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./login.html?profile=student">Student</a></li>
+				<li><a href="./login.html?profile=admin">Admin</a></li>
+				<li><a href="./login.html?profile=librarian">Librarian</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+		<h1>LibraSys</h1>
+		<p style="font-family: 'Gill Sans';">Unlocking the world of possibilities</p>
+	</header>
+	<main>
+		<section>
+			<h2>Why LibraSys?</h2>
+			<p style="font-family: 'Gill Sans';">LibraSys offers an intuitive and user-friendly library portal with a PWA design for mobile installation and offline access. It allows users to browse resources without immediate registration, providing tailored interfaces for students, librarians, admins, and visitors. The efficient booking system requires librarian approval, while notifications keep users informed. Advanced accessibility features like voice search ensure inclusivity, and comprehensive admin controls facilitate effective management. With robust security and scalable customization, LibraSys is the ideal choice for modern library management.</p>
+		</section>
+		<section>
+			<h2>Our Resources</h2>
+			<p style="font-family: 'Gill Sans';">LibraSys boasts a vast collection of books, e-books, magazines, and other valuable resources, catering to diverse interests and academic needs. Our extensive catalog ensures that users can find the materials they need, whether for research, study, or leisure reading. With easy search functionality and categorized listings, accessing a wide array of genres and topics has never been more convenient. From classic literature and cutting-edge research papers to popular magazines and multimedia resources, LibraSys provides a comprehensive library experience that meets the varied demands of its users.</p>
+		</section>
+		<section>
+			<h2>Get Started Today</h2>
+			<p style="font-family: 'Gill Sans';">Get started with LibraSys today and transform your library experience! Whether you're a student looking for study materials, a librarian managing resources, or an admin overseeing operations, LibraSys has everything you need in one intuitive platform. Register now to explore our extensive collection of books, e-books, and magazines, and take advantage of our easy booking system and personalized user interfaces. With features like offline access, voice search, and real-time notifications, managing and accessing library resources has never been easier. Join LibraSys and elevate your library to the next level!</p>
+			<a href="./login.html?profile=student" >Borrow a book</a>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 LibraSys. All rights reserved.</p>
+	</footer>
+</body>
+</html>
