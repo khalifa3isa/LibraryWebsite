@@ -1,0 +1,83 @@
+.grey-box {
+  width: 90vw;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #ccc;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+label {
+	font-weight: bold;
+	margin-top: 10px;
+}
+input {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 0px 5px #ccc;
+}
+input[type="submit"] {
+	background-color: #3565B9;
+	color: white;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: #3565E9;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-right: 30px;
+    margin-left: 40px; 
+  }
+
+  select {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 40px;
+    padding: 10px;
+    width: 400px;
+  }
+  
+  select:focus {
+    border-color: #6cb2eb;
+    box-shadow: 0 0 5px #6cb2eb;
+  }
+  
+  select#country-code {
+    font-size: 14px;
+    padding: 5px;
+    width: 100px; /* Change this value to adjust the width of the dropdown */
+    height: 25px; /* Change this value to adjust the height of the dropdown */
+  }

@@ -1,0 +1,85 @@
+/* Navigation */
+nav {
+	background-color: #333;
+	color: #fff;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+nav li {
+	margin: 10px 10px;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
+header {
+	background-color: #eee;
+	padding: 20px;
+	text-align: center;
+}
+h1 {
+	font-size: 3em;
+	margin: 0;
+	color: #3565B9;
+}
+p {
+	font-size: 1.2em;
+	margin: 0;
+}
+
+/* Main */
+section {
+	margin: 50px auto;
+	max-width: 800px;
+}
+h2 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	color: #3565B9;
+}
+p {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	margin-bottom: 30px;
+}
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #3565B9;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    height: 70px;
+    margin-right: 30px;
+    margin-left: 40px;
+  }
+
+  #grad1 {
+	height: 100vh;
+	background-color: #f4f4f4;
+  }
+
+  .logo-box {
+	height: 90px;
+	width: 100%;
+	background-color: lightblue;
+  }
